@@ -13,19 +13,21 @@ class Gafanhoto:
     # Métodos de Instância
     def aniversario(self):
         self.idade += 1
-
-    def mensagem(self):
+    
+    def __str__(self):  # mostrar os dados de uma forma mais "amigável"
+        #  dounder method
         return f'{self.nome} é Gafanhoto(a) e tem {self.idade} anos de idade.'
+    
+    def __getstate__(self):
+        return f'Estado: nome = {self.nome} ; idade = {self.idade}'
     
 # Declaração de Objetos
 g1 = Gafanhoto('Maria', 17)  
 g1.aniversario()
-print(g1.mensagem())
+print(g1)
 
-g2 = Gafanhoto('Mauro', 23)
-print(g2.mensagem())
+print(g1.__doc__)  # dunder attribute
 
-g3 = Gafanhoto()
-print(g3.mensagem())
-
-print(g1.__doc__)
+print(g1.__dict__) # atributo
+print(g1.__getstate__()) # método editável
+print(g1.__class__)
