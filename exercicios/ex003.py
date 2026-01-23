@@ -29,3 +29,5 @@ c1 = ContaBancaria(112, 'Gustavo', 3000)
 c1.deposito(500)
 c1.saque(20000)
 print(c1)
+
+print(5//2)
