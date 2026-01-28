@@ -1,3 +1,5 @@
+from rich import inspect
+
 class ContaBancaria:
     '''
     Docstring for ContaBancaria:
@@ -30,4 +32,4 @@ c1.deposito(500)
 c1.saque(20000)
 print(c1)
 
-print(5//2)
+inspect(c1)
