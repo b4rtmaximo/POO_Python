@@ -26,7 +26,7 @@ class Gamer:
         return '\n'.join(games_format) 
 
     def fav_games(self):
-        print(Panel(f'{self.exibir()}', title= f'{self.nome} / {self.nick}', style='bold white',width=38))
+        print(Panel(f'Nome real: [white on blue]{self.nome}[/white on blue]\nJogos favoritos:\n[blue]{self.exibir()}[/blue]', title= f'Jogador: < {self.nick} >', style='white',width=38))
 
 
 
