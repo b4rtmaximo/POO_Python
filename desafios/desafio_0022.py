@@ -10,7 +10,41 @@ print(Panel(texto, title=f'[ TV ]', title_align='center', width=40))
 
 print(Panel(f'CANAL = 1 2 3 4 5\nVOLUME = ▮▮▮▯', title=f'[ TV ]', title_align='center', width=40))
 
+canais = [1,2,3,4,5]
 
+for i in range(len(canais)):
+    print(i+1,end=' ')
+
+def select_canal(canal=int):
+    if canal in canais:
+        for i in range(len(canais)):
+            if canal == i:
+                print(f'[yellow on white]{i}[/yellow on white]',end=' ')
+
+select_canal(3)
+
+
+
+botao = ''
+while True:
+    botao = input('Canal: ')
+    if botao == '>':
+        for i in canais:
+            if i == 1:
+                print(f'[yellow on white]{i}[/yellow on white]',end=' ')
+    print(canais)
+
+
+
+
+
+
+
+
+
+#----------------------------------------------------------------------------------------------------------------
+#VOLUME
+'''
 volume_nivel = 1
 MAX_VOLUME = 5
 
@@ -31,9 +65,9 @@ while True:
             break   
     print(tela_volume)
 
+#----------------------------------------------------------------------------------------------------------------
 
 
-'''
 class ControleRemoto:
 
     def __init__(self,ligar):
