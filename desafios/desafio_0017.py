@@ -12,8 +12,9 @@ class Produto:
 
     def etiqueta(self):
         etiqueta = Panel(f'[white]{self.valor}[/]', title=f'{self.nome}', style='yellow',width=16, height=4)
-        
+        print(etiqueta)
+
         return etiqueta
     
 p1 = Produto('iMAC', 'R$ 10.000,00')
-print(p1.etiqueta())
+p1.etiqueta()
