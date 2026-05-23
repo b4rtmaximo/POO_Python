@@ -60,3 +60,6 @@ frete2.calc_frete()
 
 frete3 = Drone(11)
 frete3.calc_frete()
+
+#print do nome da classe:
+print(f'Frete de {type(frete1).__name__}')
