@@ -18,7 +18,7 @@ class Moto(Transporte):
     def calc_frete(self):
         fator = 0.5
         self.frete = fator * self.distancia 
-        print(f'Frete = R$ {self.frete}') 
+        return (f'Frete = R$ {self.frete}') 
 
 
 class Caminhao(Transporte):
@@ -30,10 +30,10 @@ class Caminhao(Transporte):
         fator = 1.5
         
         if self.distancia < 50:
-            print(f'A distância de {self.distancia} Km não atende ao mínimo necessário.')
+            return (f'A distância de {self.distancia} Km não atende ao mínimo necessário.')
         else:
             self.frete = self.distancia * fator
-            print(f'Frete = R$ {self.frete}') 
+            return (f'Frete = R$ {self.frete}') 
         
 
 class Drone(Transporte):
@@ -45,10 +45,10 @@ class Drone(Transporte):
         fator = 9.5
         
         if self.distancia > 10:
-            print(f'A distância de {self.distancia} Km não atende ao máximo permitido')
+            return (f'A distância de {self.distancia} Km não atende ao máximo permitido')
         else:
             self.frete = self.distancia * fator
-            print(f'Frete = R$ {self.frete}')         
+            return (f'Frete = R$ {self.frete}')         
 
 
 
